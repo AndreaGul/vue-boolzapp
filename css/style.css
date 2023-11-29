@@ -16,6 +16,10 @@
   display: flex;
 }
 
+.margin-left-text {
+  margin-left: 22px;
+}
+
 body {
   background-color: var();
   height: 100vh;
@@ -48,6 +52,8 @@ main {
 .col-left {
   background-color: blue;
   width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 .col-right {
   background-color: yellow;
@@ -90,6 +96,29 @@ main {
 .search-icon {
   width: 65px;
   text-align: center;
+}
+
+.search input {
+  border: none;
+}
+
+.contact-box {
+  background-color: var(--bg-color-grey-white);
+  flex-grow: 1;
+  padding-right: 15px;
+  overflow-y: auto;
+}
+
+.list-contact {
+  list-style-type: none;
+  background-color: white;
+}
+
+.list-contact .contact {
+  height: 80px;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 10px 20px;
 }
 
 /*/main */
