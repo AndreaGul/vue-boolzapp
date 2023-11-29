@@ -57,26 +57,11 @@
           <!-- contatti -->
           <div class="contact-box">
             <ul class="list-contact">
-              <li class="row contact">
-                <div>a</div>
-                <div class="margin-left-text">a</div>
+              <li v-for="contact in contacts" class="row contact">
+                <div  class="profile-info"><img v-bind:src="contact.avatar" alt="contact.name"></div>
+                <div class="margin-left-text">{{contact.name}}</div>
               </li>
-              <li class="row contact">
-                <div>a</div>
-                <div class="margin-left-text">a</div>
-              </li>
-              <li class="row contact">
-                <div>a</div>
-                <div class="margin-left-text">a</div>
-              </li>
-              <li class="row contact">
-                <div>a</div>
-                <div class="margin-left-text">a</div>
-              </li>
-              <li class="row contact">
-                <div>a</div>
-                <div class="margin-left-text">a</div>
-              </li>
+              
             </ul>
           </div>
           <!-- /contatti -->

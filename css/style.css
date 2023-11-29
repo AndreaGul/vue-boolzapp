@@ -169,7 +169,7 @@ main {
 .contact-box {
   background-color: var(--bg-color-light-grey);
   flex-grow: 1;
-  padding-right: 15px;
+
   overflow-y: auto;
 }
 
