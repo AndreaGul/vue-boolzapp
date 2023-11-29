@@ -44,6 +44,7 @@
   font-size: 18px;
 }
 
+/* immagini rotonde */
 .profile-info {
   height: 100%;
 }
@@ -53,6 +54,7 @@
   border-radius: 50%;
   overflow: hidden;
 }
+/* /immagini rotonde */
 /* /common */
 
 body {
@@ -111,6 +113,22 @@ main {
   margin-left: 8px;
 }
 
+.notification-text p:nth-child(2) {
+  color: var(--txt-grey);
+  text-decoration: underline;
+}
+
+.notification-bell {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: white;
+  line-height: 50px;
+  color: var(--bg-color-celest);
+  font-size: 20px;
+}
+
 /* /parte della notifica */
 
 /* parte della ricerca contatti  */
@@ -131,12 +149,18 @@ main {
 }
 
 .search-icon {
-  width: 65px;
+  height: 100%;
+  width: 75px;
   text-align: center;
+  line-height: 35px;
+  font-size: 14px;
+  border-right: var(--outline-color-grey) 1px solid;
 }
 
 .search input {
+  margin-left: 10px;
   border: none;
+  width: calc(100% - 75px);
 }
 
 /* /parte della ricerca contatti */
