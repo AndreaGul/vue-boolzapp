@@ -7,6 +7,13 @@
 :root {
   --bg-color-green: #009788;
   --bg-color-grey: #dadbd5;
+  --bg-color-grey-white: #ede9ea;
+  --bg-color-celest: #8edafc;
+}
+
+/* common */
+.row {
+  display: flex;
 }
 
 body {
@@ -35,6 +42,54 @@ main {
   height: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+}
+
+.col-left {
+  background-color: blue;
+  width: 30%;
+}
+.col-right {
+  background-color: yellow;
+  width: 70%;
+}
+
+.header-standard {
+  background-color: var(--bg-color-grey-white);
+  height: 70px;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification {
+  background-color: var(--bg-color-celest);
+  height: 80px;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.notification-text {
+  margin-left: 8px;
+}
+
+.search-box {
+  height: 50px;
+  background-color: var(--bg-color-grey-white);
+  padding: 8px;
+}
+
+.search {
+  height: 100%;
+  align-items: center;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.search-icon {
+  width: 65px;
+  text-align: center;
 }
 
 /*/main */
