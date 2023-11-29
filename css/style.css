@@ -20,6 +20,17 @@
   margin-left: 22px;
 }
 
+.header-standard {
+  background-color: var(--bg-color-grey-white);
+  height: 70px;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* /common */
+
 body {
   background-color: var();
   height: 100vh;
@@ -49,26 +60,16 @@ main {
   display: flex;
 }
 
+/* colonna sinistra */
+/* caratteristiche della colonna di sinistra */
 .col-left {
   background-color: blue;
   width: 30%;
   display: flex;
   flex-direction: column;
 }
-.col-right {
-  background-color: yellow;
-  width: 70%;
-}
 
-.header-standard {
-  background-color: var(--bg-color-grey-white);
-  height: 70px;
-  padding: 12px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
+/* parte della notifica */
 .notification {
   background-color: var(--bg-color-celest);
   height: 80px;
@@ -80,6 +81,9 @@ main {
   margin-left: 8px;
 }
 
+/* /parte della notifica */
+
+/* parte della ricerca contatti  */
 .search-box {
   height: 50px;
   background-color: var(--bg-color-grey-white);
@@ -102,6 +106,9 @@ main {
   border: none;
 }
 
+/* /parte della ricerca contatti */
+
+/* parte degli contatti  */
 .contact-box {
   background-color: var(--bg-color-grey-white);
   flex-grow: 1;
@@ -121,4 +128,11 @@ main {
   padding: 10px 20px;
 }
 
+/* /parte degli contatti  */
+/* /colonna sinistra */
+
+.col-right {
+  background-color: yellow;
+  width: 70%;
+}
 /*/main */
