@@ -3,3 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --bg-color-green: #009788;
+  --bg-color-grey: #dadbd5;
+}
+
+body {
+  background-color: var();
+  height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  background-color: var(--bg-color-green);
+  position: absolute;
+  height: 15%;
+  width: 100%;
+}
