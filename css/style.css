@@ -100,7 +100,7 @@ main {
 /* parte della notifica */
 .notification {
   background-color: var(--bg-color-celest);
-  height: 80px;
+
   padding: 15px 20px;
   align-items: center;
 }
