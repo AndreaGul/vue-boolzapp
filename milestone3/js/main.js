@@ -169,6 +169,7 @@ createApp({
         },
       ],
       position: 0,
+      addMessage: '',
     };
   },
   methods: {
@@ -183,6 +184,14 @@ createApp({
     contactMessages(index) {
       this.position = index;
       return this.position;
+    },
+    addingMessage(position) {
+      this.contacts[position].messages.push({
+        message: this.addMessage,
+        status: 'sent',
+      });
+
+      console.log(this.addMessage);
     },
   },
 }).mount('#app');
