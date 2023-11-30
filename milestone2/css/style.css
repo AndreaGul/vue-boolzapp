@@ -202,11 +202,27 @@ main {
   padding: 55px 95px;
 }
 
+.messages-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  width: 315px;
+  height: 55px;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 10px 0;
+}
+
 .messages-container .message-sended {
+  align-self: flex-end;
   background-color: var(--bg-color-message-sended);
 }
 
 .messages-container .message-recived {
+  align-self: flex-start;
   background-color: var(--bg-color-message-recived);
 }
 
