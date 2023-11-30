@@ -59,19 +59,13 @@
 /* /common */
 
 body {
-  background-color: var();
   height: 100vh;
-  position: relative;
-  font-family: 'Lato', sans-serif;
-}
 
-body::before {
-  content: '';
-  background-color: var(--bg-color-green);
-  position: absolute;
-  height: 15%;
-  width: 100%;
-  z-index: -10;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(
+    var(--bg-color-green) 15%,
+    var(--bg-color-grey) 15%
+  );
 }
 
 /* main */
