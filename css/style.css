@@ -56,6 +56,10 @@
   overflow: hidden;
 }
 /* /immagini rotonde */
+
+input {
+  font-family: 'Lato', sans-serif;
+}
 /* /common */
 
 body {
