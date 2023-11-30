@@ -170,4 +170,12 @@ createApp({
       ],
     };
   },
+  methods: {
+    SentOrNot(status) {
+      if (status === 'sent') {
+        return true;
+      }
+      return false;
+    },
+  },
 }).mount('#app');

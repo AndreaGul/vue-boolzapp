@@ -96,8 +96,9 @@
            <!-- /header destro -->
           <div class="messages-container">
             <ul>  
-            <li class="message message-sended">message</li>
-            <li class="message message-recived">message</li>
+            <li v-for="message in contacts[0].messages" class="message "
+            :class="SentOrNot(message.status) ? 'message-sended' : 'message-recived'" >{{message.message}}</li>
+            
             
           </ul>
           </div>

@@ -200,6 +200,7 @@ main {
   background-image: url('../img/mine.jpg');
   background-position: center;
   padding: 55px 95px;
+  overflow-y: auto;
 }
 
 .messages-container ul {
