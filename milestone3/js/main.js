@@ -190,6 +190,13 @@ createApp({
         message: this.addMessage,
         status: 'sent',
       });
+      setTimeout(
+        this.contacts[position].messages.push({
+          message: 'ok',
+          status: 'received',
+        }),
+        1000
+      );
 
       console.log(this.addMessage);
     },
