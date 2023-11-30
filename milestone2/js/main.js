@@ -168,14 +168,21 @@ createApp({
           ],
         },
       ],
+      position: 0,
     };
   },
   methods: {
+    // verifica se il messaggio e' stato inviato ricevuto
     SentOrNot(status) {
       if (status === 'sent') {
         return true;
       }
       return false;
+    },
+    // grazie alla posizione dei contatti nella lista a sinistra e alla variabile position posso assegnare a position il valore della posizione nell'array dei contatti cosi da poter stampare i messaggi di quel contatto
+    contactMessages(index) {
+      this.position = index;
+      return this.position;
     },
   },
 }).mount('#app');

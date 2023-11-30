@@ -211,7 +211,7 @@ main {
 
 .message {
   width: 315px;
-  height: 55px;
+
   border-radius: 10px;
   padding: 16px;
   margin: 10px 0;
@@ -219,6 +219,7 @@ main {
 
 .messages-container .message-sended {
   align-self: flex-end;
+
   background-color: var(--bg-color-message-sended);
 }
 

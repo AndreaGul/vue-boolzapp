@@ -30,15 +30,20 @@
           <!-- header sinistro -->
           <header class="header-standard">
            
+            <!-- informazioni del profilo -->
             <div class="profile-info row">
-              <img src="img/avatar_1.jpg" alt="">
-            <div class="margin-left-text">Sofia</div></div>
+              <img src="img/avatar_2.jpg" alt="">
+            <div class="margin-left-text">Andrea</div></div>
+            <!-- informazioni del profilo -->
+
+            <!-- icone opzioni -->
             <div class="row header-icons color-grey">
               <div><i class="fa-solid fa-circle-notch"></i></div>
               <div><i class="fa-solid fa-message"></i></div>
               <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
-              
             </div>
+            <!-- /icone opzioni -->
+
           </header>
           <!-- /header sinistro -->
           <!-- notifiche -->
@@ -64,7 +69,7 @@
           <!-- contatti -->
           <div class="contact-box">
             <ul class="list-contact">
-              <li v-for="contact in contacts" class="row contact">
+              <li v-for="(contact, index) in contacts" class="row contact" @click="contactMessages(index)">
                 <div  class="profile-info"><img v-bind:src="contact.avatar" alt="contact.name"></div>
                 <div class="margin-left-text">{{contact.name}}</div>
               </li>
@@ -79,10 +84,10 @@
           <!-- header destro -->
           <header class="header-standard">
             <div class="profile-info row">
-              <img src="img/avatar_1.jpg" alt="">
+              <img :src="contacts[position].avatar" alt="">
             <div class="margin-left-text ">
-              <p>Sofia</p>
-              <p class="color-grey">ultimo</p>
+              <p>{{contacts[position].name}}</p>
+              <p class="color-grey"></p>
             </div>
           </div>
          
@@ -95,18 +100,20 @@
           </header>
            <!-- /header destro -->
           <div class="messages-container">
+            <!-- lista con i messaggi -->
             <ul>  
-            <li v-for="message in contacts[0].messages" class="message "
-            :class="SentOrNot(message.status) ? 'message-sended' : 'message-recived'" >{{message.message}}</li>
-            
-            
-          </ul>
+              <li v-for="message in contacts[position].messages" class="message "
+              :class="SentOrNot(message.status) ? 'message-sended' : 'message-recived'" >{{message.message}}</li>
+            </ul>
+            <!-- lista con i messaggi -->
           </div>
+          <!-- footer della parte messaggi -->
           <footer class="row footer-standard">
             <div><i class="fa-regular fa-face-smile"></i></div>
             <input type="text" placeholder="Scrivi un messagio" class="message-input"></input>
             <div><i class="fa-solid fa-microphone"></i></div>
           </footer>
+          <!-- /footer della parte messaggi -->
         </div>
       </div>
     </main>
