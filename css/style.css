@@ -128,8 +128,6 @@ main {
 
 /* parte della ricerca contatti  */
 .search-box {
-  height: 50px;
-
   background-color: var(--bg-color-light-grey);
 
   padding: 8px;
@@ -147,7 +145,7 @@ main {
   height: 100%;
   width: 75px;
   text-align: center;
-  line-height: 35px;
+  line-height: 30px;
   font-size: 14px;
   border-right: var(--outline-color-grey) 1px solid;
 }
