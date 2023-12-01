@@ -170,6 +170,7 @@ createApp({
       ],
       position: 0,
       addMessage: '',
+      searchContact: '',
     };
   },
   methods: {
@@ -190,15 +191,18 @@ createApp({
         message: this.addMessage,
         status: 'sent',
       });
-      setTimeout(
+      setTimeout(() => {
         this.contacts[position].messages.push({
           message: 'ok',
           status: 'received',
-        }),
-        10000
-      );
-      console.log(this.addMessage);
+        });
+      }, 1000);
+
       this.addMessage = '';
+    },
+    searchingContacts() {
+      this.contacts[0].name.inclused;
+      this.searchingContacts;
     },
   },
 }).mount('#app');
