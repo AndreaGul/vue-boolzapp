@@ -73,8 +73,8 @@
           <div class="contact-box">
             <ul class="list-contact">
               <li v-for="(contact, index) in contacts" @click="contactMessages(index)" class="row contact"
-              :class="{'active': index === position }"
-               :class="{'d-none': searchingContacts(index)}" >
+                :class="{'active': index === position, 'd-none': searchingContacts(index) }"
+                >
                 <div  class="profile-info"><img v-bind:src="contact.avatar" alt="contact.name"></div>
                 <div class="margin-left-text">{{contact.name}}</div>
               </li>

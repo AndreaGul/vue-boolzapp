@@ -207,7 +207,6 @@ createApp({
           .toLowerCase()
           .includes(this.searchContact.toLowerCase()) !== true
       ) {
-        console.log('eureca');
         return true;
       }
       // console.log(this.contacts[0]);
