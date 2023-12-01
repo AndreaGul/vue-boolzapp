@@ -197,7 +197,7 @@ createApp({
         }),
         1000
       );
-
+      this.addMessage = '';
       console.log(this.addMessage);
     },
   },
