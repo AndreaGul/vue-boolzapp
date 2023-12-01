@@ -62,14 +62,17 @@
           <div class="search-box">
             <div class="row search color-grey">
               <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-              <div><input v-model="searchContact" type="text" placeholder="Cerca" /></div>
+              <div>
+                <input v-model="searchContact" @keyup="searchingContacts()"  type="text" placeholder="Cerca" />
+                
+              </div>
             </div>
           </div>
           <!-- /ricerca contatti -->
           <!-- contatti -->
           <div class="contact-box">
             <ul class="list-contact">
-              <li v-for="(contact, index) in contacts" class="row contact" @click="contactMessages(index)">
+              <li v-for="(contact, index) in contacts" @click="contactMessages(index)" class="row contact" :class="{'d-none': searchingContacts(index)}" >
                 <div  class="profile-info"><img v-bind:src="contact.avatar" alt="contact.name"></div>
                 <div class="margin-left-text">{{contact.name}}</div>
               </li>
@@ -111,6 +114,7 @@
           <footer class="row footer-standard">
             <div><i class="fa-regular fa-face-smile"></i></div>
             <input v-model="addMessage" @keyup.enter="addingMessage(position)" type="text" placeholder="Scrivi un messagio" class="message-input"></input>
+            
             <div><i class="fa-solid fa-microphone"></i></div>
           </footer>
           <!-- /footer della parte messaggi -->

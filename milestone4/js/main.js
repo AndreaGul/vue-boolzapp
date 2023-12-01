@@ -200,9 +200,17 @@ createApp({
 
       this.addMessage = '';
     },
-    searchingContacts() {
-      this.contacts[0].name.inclused;
-      this.searchingContacts;
+    searchingContacts(index) {
+      if (
+        this.contacts[index].name
+          .toLowerCase()
+          .includes(this.searchContact.toLowerCase()) !== true
+      ) {
+        console.log('eureca');
+        return true;
+      }
+      // console.log(this.contacts[0]);
+      // console.log(this.contacts[0].name);
     },
   },
 }).mount('#app');
