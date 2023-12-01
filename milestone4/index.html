@@ -7,8 +7,8 @@
 
     <!-- font lato -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- font awesome -->
     <link
@@ -37,11 +37,11 @@
             <!-- informazioni del profilo -->
 
             <!-- icone opzioni -->
-            <div class="row header-icons color-grey">
-              <div><i class="fa-solid fa-circle-notch"></i></div>
-              <div><i class="fa-solid fa-message"></i></div>
-              <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
-            </div>
+            <ul class="row header-icons color-grey">
+              <li><i role="button" class="fa-solid fa-circle-notch"></i></li>
+              <li><i class="fa-solid fa-message"></i></li>
+              <li><i class="fa-solid fa-ellipsis-vertical"></i></l>
+            </u>
             <!-- /icone opzioni -->
 
           </header>
@@ -62,7 +62,7 @@
           <div class="search-box">
             <div class="row search color-grey">
               <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-              <div>
+              <div class="search-input">
                 <input v-model="searchContact" @keyup="searchingContacts()"  type="text" placeholder="Cerca" />
                 
               </div>
@@ -72,7 +72,9 @@
           <!-- contatti -->
           <div class="contact-box">
             <ul class="list-contact">
-              <li v-for="(contact, index) in contacts" @click="contactMessages(index)" class="row contact" :class="{'d-none': searchingContacts(index)}" >
+              <li v-for="(contact, index) in contacts" @click="contactMessages(index)" class="row contact"
+              :class="{'active': index === position }"
+               :class="{'d-none': searchingContacts(index)}" >
                 <div  class="profile-info"><img v-bind:src="contact.avatar" alt="contact.name"></div>
                 <div class="margin-left-text">{{contact.name}}</div>
               </li>
@@ -94,11 +96,11 @@
             </div>
           </div>
          
-            <div class="row header-icons color-grey">
-              <div><i class="fa-solid fa-magnifying-glass"></i></div>
-              <div><i class="fa-solid fa-paperclip"></i></div>
-              <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
-            </div>
+            <ul class="row header-icons color-grey">
+              <li><i class="fa-solid fa-magnifying-glass"></i></li>
+              <li><i class="fa-solid fa-paperclip"></i></li>
+              <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+            </ul>
 
           </header>
            <!-- /header destro -->

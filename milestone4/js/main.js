@@ -202,6 +202,7 @@ createApp({
     },
     searchingContacts(index) {
       if (
+        //se gli do un numero dell'array non da errore in console invece se do l'index da errore
         this.contacts[index].name
           .toLowerCase()
           .includes(this.searchContact.toLowerCase()) !== true

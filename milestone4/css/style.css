@@ -7,6 +7,7 @@
 :root {
   --bg-color-green: #009788;
   --bg-color-grey: #dadbd5;
+  --bg-color-active-grey: #e9ebeb;
   --bg-color-grey-white: #ede9ea;
   --bg-color-celest: #8edafc;
   --bg-color-light-grey: #fbfbfb;
@@ -18,6 +19,10 @@
 }
 
 /* common */
+
+.active {
+  background-color: var(--bg-color-active-grey);
+}
 
 .row {
   display: flex;
@@ -45,6 +50,7 @@
 }
 
 .header-icons {
+  list-style-type: none;
   gap: 16px;
   font-size: 18px;
 }
@@ -58,6 +64,8 @@
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
+  display: block;
+  object-fit: cover;
 }
 /* /immagini rotonde */
 
@@ -70,6 +78,7 @@ body {
   height: 100vh;
 
   font-family: 'Lato', sans-serif;
+  font-weight: 700;
   background: linear-gradient(
     var(--bg-color-green) 15%,
     var(--bg-color-grey) 15%
@@ -83,9 +92,8 @@ main {
 }
 
 .container {
-  background-color: red;
   height: 100%;
-  max-width: 1000px;
+  max-width: 80%;
   margin: 0 auto;
   display: flex;
 }
@@ -93,10 +101,13 @@ main {
 /* colonna sinistra */
 /* caratteristiche della colonna di sinistra */
 .col-left {
-  background-color: blue;
+  min-width: 300px;
   width: 30%;
+  border-right: 1px solid var(--bg-color-grey);
   display: flex;
+
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 /* parte profilo */
@@ -115,6 +126,10 @@ main {
 
 .notification-text {
   margin-left: 8px;
+}
+.notification-text a {
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .notification-bell {
@@ -139,9 +154,10 @@ main {
 
 .search {
   height: 100%;
+  width: 100%;
   align-items: center;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 0 3px 3px 0;
   border: var(--outline-color-grey) solid 1px;
 }
 
@@ -149,15 +165,25 @@ main {
   height: 100%;
   width: 75px;
   text-align: center;
-  line-height: 30px;
+  padding: 10px 0;
   font-size: 14px;
   border-right: var(--outline-color-grey) 1px solid;
 }
 
-.search input {
-  margin-left: 10px;
+.search-input {
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.search-input input {
+  outline: none;
+  padding: 0 10px;
   border: none;
-  width: calc(100% - 75px);
+  width: 100%;
+  display: block;
+
+  height: 100%;
 }
 
 /* /parte della ricerca contatti */
@@ -182,11 +208,18 @@ main {
   padding: 10px 20px;
 }
 
+.list-contact .contact:last-child {
+  border-bottom: none;
+}
+
+.list-contact .contact:hover {
+  background-color: var(--bg-color-active-grey);
+}
+
 /* /parte degli contatti  */
 /* /colonna sinistra */
 
 .col-right {
-  background-color: yellow;
   width: 70%;
   flex-direction: column;
 }
@@ -204,7 +237,7 @@ main {
   background-image: url('../img/mine.jpg');
   background-position: center;
   padding: 55px 95px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .messages-container ul {
