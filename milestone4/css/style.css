@@ -285,6 +285,7 @@ main {
   border: none;
   border-radius: 3px;
   padding: 0 16px;
+  outline: none;
 }
 
 .footer-standard i {
