@@ -202,15 +202,17 @@ createApp({
     },
     searchingContacts(index) {
       if (
-        //se gli do un numero dell'array non da errore in console invece se do l'index da errore
-
+        //se index e minore della lunghezza dell'array
         index < this.contacts.length &&
+        //e le lettere presenti nel v-model dell'input con proprieta searchContact non sono all'interno del nome in posizione index dell'array contacs
         this.contacts[index].name
           .toLowerCase()
           .includes(this.searchContact.toLowerCase()) !== true
       ) {
+        // la funzione restituira' true in modo tale verificare la condizione inposta nell'html e quindi inserire la classe d-none e quindi rimuovere l'elemento dal flusso dell'html
         return true;
-      } else {
+      } //altrimenti ritorna false e l'elemento sara' ancora visibile
+      else {
         return false;
       }
 
