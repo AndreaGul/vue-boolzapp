@@ -171,9 +171,13 @@ createApp({
       position: 0,
       addMessage: '',
       searchContact: '',
+      active: true,
     };
   },
   methods: {
+    mouseover() {
+      this.active = !this.active;
+    },
     // verifica se il messaggio e' stato inviato ricevuto
     SentOrNot(status) {
       if (status === 'sent') {

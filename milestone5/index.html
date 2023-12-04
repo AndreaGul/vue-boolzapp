@@ -122,6 +122,10 @@
                 :class="SentOrNot(message.status) ? 'message-sended' : 'message-recived'"
               >
                 {{message.message}}
+                <div class="message-dropdown">
+                  <i @click="mouseover" class="fa-solid fa-chevron-down"></i>
+                </div>
+                <button v-show="active" class="dropdown">Elimina</button>
               </li>
             </ul>
             <!-- lista con i messaggi -->
