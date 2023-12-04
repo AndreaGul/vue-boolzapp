@@ -6,9 +6,12 @@
     <title>Boolzapp</title>
 
     <!-- font lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- font awesome -->
     <link
@@ -29,11 +32,11 @@
         <div class="col-left">
           <!-- header sinistro -->
           <header class="header-standard">
-           
             <!-- informazioni del profilo -->
             <div class="profile-info row">
-              <img src="img/avatar_2.jpg" alt="">
-            <div class="margin-left-text">Andrea</div></div>
+              <img src="img/avatar_2.jpg" alt="" />
+              <div class="margin-left-text">Andrea</div>
+            </div>
             <!-- informazioni del profilo -->
 
             <!-- icone opzioni -->
@@ -43,28 +46,32 @@
               <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
             </ul>
             <!-- /icone opzioni -->
-
           </header>
           <!-- /header sinistro -->
           <!-- notifiche -->
           <div class="row notification">
-            <div class="notification-bell"><i class="fa-solid fa-bell-slash"></i></div>
-            <div class="notification-text"> 
-              
+            <div class="notification-bell">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+            <div class="notification-text">
               <p>Ricevi</p>
               <a href="" class="color-grey">Attiva</a>
-             
-            
-        </div>
+            </div>
           </div>
           <!-- /notifiche -->
           <!-- ricerca contatti -->
           <div class="search-box">
             <div class="row search color-grey">
-              <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
               <div class="search-input">
-                <input v-model="searchContact" @keyup="searchingContacts()"  type="text" placeholder="Cerca" />
-                
+                <input
+                  v-model="searchContact"
+                  @keyup="searchingContacts()"
+                  type="text"
+                  placeholder="Cerca"
+                />
               </div>
             </div>
           </div>
@@ -72,51 +79,64 @@
           <!-- contatti -->
           <div class="contact-box">
             <ul class="list-contact">
-              <li v-for="(contact, index) in contacts" @click="contactMessages(index)" class="row contact"
+              <li
+                v-for="(contact, index) in contacts"
+                @click="contactMessages(index)"
+                class="row contact"
                 :class="{'active': index === position, 'd-none': searchingContacts(index) }"
-                >
-                <div  class="profile-info"><img v-bind:src="contact.avatar" alt="contact.name"></div>
+              >
+                <div class="profile-info">
+                  <img v-bind:src="contact.avatar" alt="contact.name" />
+                </div>
                 <div class="margin-left-text">{{contact.name}}</div>
               </li>
-              
             </ul>
           </div>
           <!-- /contatti -->
         </div>
         <!-- /colonna sinistra -->
         <div class="row col-right">
-
           <!-- header destro -->
           <header class="header-standard">
             <div class="profile-info row">
-              <img :src="contacts[position].avatar" alt="">
-            <div class="margin-left-text ">
-              <p>{{contacts[position].name}}</p>
-              <p class="color-grey"></p>
+              <img :src="contacts[position].avatar" alt="" />
+              <div class="margin-left-text">
+                <p>{{contacts[position].name}}</p>
+                <p class="color-grey"></p>
+              </div>
             </div>
-          </div>
-         
+
             <ul class="row header-icons color-grey">
               <li><i class="fa-solid fa-magnifying-glass"></i></li>
               <li><i class="fa-solid fa-paperclip"></i></li>
               <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
             </ul>
-
           </header>
-           <!-- /header destro -->
+          <!-- /header destro -->
           <div class="messages-container">
             <!-- lista con i messaggi -->
-            <ul>  
-              <li v-for="message in contacts[position].messages" class="message "
-              :class="SentOrNot(message.status) ? 'message-sended' : 'message-recived'" >{{message.message}}</li>
+            <ul>
+              <li
+                v-for="message in contacts[position].messages"
+                class="message"
+                :class="SentOrNot(message.status) ? 'message-sended' : 'message-recived'"
+              >
+                {{message.message}}
+              </li>
             </ul>
             <!-- lista con i messaggi -->
           </div>
           <!-- footer della parte messaggi -->
           <footer class="row footer-standard">
             <div><i class="fa-regular fa-face-smile"></i></div>
-            <input v-model="addMessage" @keyup.enter="addingMessage(position)" type="text" placeholder="Scrivi un messagio" class="message-input"></input>
-            
+            <input
+              v-model="addMessage"
+              @keyup.enter="addingMessage(position)"
+              type="text"
+              placeholder="Scrivi un messagio"
+              class="message-input"
+            />
+
             <div><i class="fa-solid fa-microphone"></i></div>
           </footer>
           <!-- /footer della parte messaggi -->

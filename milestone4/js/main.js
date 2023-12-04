@@ -203,12 +203,17 @@ createApp({
     searchingContacts(index) {
       if (
         //se gli do un numero dell'array non da errore in console invece se do l'index da errore
+
+        index < this.contacts.length &&
         this.contacts[index].name
           .toLowerCase()
           .includes(this.searchContact.toLowerCase()) !== true
       ) {
         return true;
+      } else {
+        return false;
       }
+
       // console.log(this.contacts[0]);
       // console.log(this.contacts[0].name);
     },
