@@ -171,7 +171,6 @@ createApp({
       position: 0,
       addMessage: '',
       searchContact: '',
-      active: false,
     };
   },
   methods: {
