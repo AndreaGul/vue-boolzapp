@@ -171,13 +171,10 @@ createApp({
       position: 0,
       addMessage: '',
       searchContact: '',
-      active: true,
+      active: false,
     };
   },
   methods: {
-    mouseover() {
-      this.active = !this.active;
-    },
     // verifica se il messaggio e' stato inviato ricevuto
     SentOrNot(status) {
       if (status === 'sent') {
@@ -219,9 +216,12 @@ createApp({
       else {
         return false;
       }
-
-      // console.log(this.contacts[0]);
-      // console.log(this.contacts[0].name);
+    },
+    mouseover() {
+      this.active = !this.active;
+    },
+    deleteMessage(index) {
+      this.contacts[this.position].messages.splice(index, 1);
     },
   },
 }).mount('#app');

@@ -117,7 +117,7 @@
             <!-- lista con i messaggi -->
             <ul>
               <li
-                v-for="message in contacts[position].messages"
+                v-for="(message,index) in contacts[position].messages"
                 class="message"
                 :class="SentOrNot(message.status) ? 'message-sended' : 'message-recived'"
               >
@@ -125,7 +125,13 @@
                 <div class="message-dropdown">
                   <i @click="mouseover" class="fa-solid fa-chevron-down"></i>
                 </div>
-                <button v-show="active" class="dropdown">Elimina</button>
+                <button
+                  v-show="active"
+                  @click="deleteMessage(index)"
+                  class="dropdown"
+                >
+                  Elimina
+                </button>
               </li>
             </ul>
             <!-- lista con i messaggi -->
