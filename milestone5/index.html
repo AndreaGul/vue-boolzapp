@@ -123,15 +123,11 @@
               >
                 {{message.message}}
                 <div class="message-dropdown">
-                  <i @click="mouseover" class="fa-solid fa-chevron-down"></i>
+                  <i class="fa-solid fa-chevron-down"></i>
+                  <button @click="deleteMessage(index)" class="dropdown">
+                    Elimina
+                  </button>
                 </div>
-                <button
-                  v-show="active"
-                  @click="deleteMessage(index)"
-                  class="dropdown"
-                >
-                  Elimina
-                </button>
               </li>
             </ul>
             <!-- lista con i messaggi -->

@@ -217,9 +217,7 @@ createApp({
         return false;
       }
     },
-    mouseover() {
-      this.active = !this.active;
-    },
+
     deleteMessage(index) {
       this.contacts[this.position].messages.splice(index, 1);
     },
